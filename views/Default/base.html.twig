@@ -21,8 +21,9 @@
 
             <section class="content-header">
                 <h1>
-                    Composer Repository
-                    <small>for Terramar Labs</small>
+                    {{ config.repository_title }}
+                    <br>
+                    <small>for {{ config.repository_for }}</small>
                 </h1>
                 {% block login_link %}
                 <div class="login-link">
@@ -37,11 +38,17 @@
             </section>
             
             <section class="content-footer">
+                <p>{{ config.impressum }}</p>
                 <p><small>Proudly powered by <a href="https://github.com/composer/satis">Satis</a> {{ constant('Composer\\Satis\\Satis::VERSION') }} 
                         and <a href="https://github.com/terramar-labs/packages">Packages</a> {{ constant('Terramar\\Packages\\Version::VERSION') }}
                         {% if updatedAt %}<span class="last-update">Last updated: {{ updatedAt|date('Y-m-d H:i:s') }}</span>{% endif %}
                 </small></p>
+                <p><small>Extended by MJR.ONE URL: <a href="https://git.mjr.one/mjr-public/packages">https://git.mjr.one/mjr-public/packages</a></small></p>
+                <br>
+                <br>
+                <br>
                 <p id="copy">&copy; {{ "now"|date('Y') }} Terramar Labs.</p>
+                <p id="copy">Extensions: &copy; {{ "now"|date('Y') }} MJR.ONE Chris Westerfield.</p>
             </section>
         </div>
 

@@ -22,6 +22,7 @@ use Terramar\Packages\Plugin\GitLab\Plugin as GitLabPlugin;
 use Terramar\Packages\Plugin\Sami\Plugin as SamiPlugin;
 use Terramar\Packages\Plugin\Satis\Plugin as SatisPlugin;
 use Terramar\Packages\Plugin\GitHub\Plugin as GitHubPlugin;
+use Terramar\Packages\Plugin\BitBucket\Plugin as BitBucketPlugin;
 use Terramar\Packages\Plugin\PluginInterface;
 
 class Application extends BaseApplication
@@ -76,6 +77,7 @@ class Application extends BaseApplication
         $this->registerPlugin(new CloneProjectPlugin());
         $this->registerPlugin(new SamiPlugin());
         $this->registerPlugin(new SatisPlugin());
+        $this->registerPlugin(new BitBucketPlugin());
     }
 
     /**

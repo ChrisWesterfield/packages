@@ -36,7 +36,6 @@ class RemoteController
     public function newAction(Application $app)
     {
         $adapters = $app->get('packages.helper.sync')->getAdapters();
-
         return new Response($app->get('templating')->render('Remote/new.html.twig', array(
                 'adapters' => $adapters,
                 'remote' => new Remote(),

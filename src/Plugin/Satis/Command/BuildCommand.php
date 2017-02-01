@@ -42,7 +42,6 @@ class BuildCommand extends BaseCommand implements ContainerAwareInterface
             $configFile = $configHelper->generateConfiguration();
             $input->setArgument('file', $configFile);
         }
-
         parent::execute($input, $output);
     }
 

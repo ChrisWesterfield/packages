@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="400af38b-9401-4afe-a8ca-9ff15b4eb53f" name="source" url="http://source.spectware.com">
+        <fileTransfer host="source.spectware.com" port="22" privateKey="$USER_HOME$/.ssh/old_key/id_rsa" rootFolder="/home/source/packages" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

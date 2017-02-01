@@ -183,7 +183,6 @@ class SyncAdapter implements SyncAdapterInterface
 
             ++$page;
         }
-
         return $projects;
     }
 

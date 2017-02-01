@@ -1,0 +1,52 @@
+{% extends 'Plugin/_box.html.twig' %}
+
+{% set box_type = 'box-warning' %}
+
+{% block title %}BitBucket{% endblock %}
+
+{% block body %}
+  <div class="form-group" id="bitbucket_plugin">
+    Configure BitBucket settings for this remote
+  </div>
+  <div class="form-group">
+    <label for="url">URL</label>
+    <input type="url" name="bitbucket_url" value="{{ config.url }}" placeholder="Enter BitBucket URL" id="bitbucket_url" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="bitbucket_user">Username</label>
+    <input type="text" name="bitbucket_user" value="{{ config.user }}" placeholder="Enter Username Token" id="bitbucket_user" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="bitbucket_password">User Password</label>
+    <input type="text" name="bitbucket_password" value="{{ config.password }}" placeholder="Enter Password" id="bitbucket_password" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="bitbucket_webhook_key">Webhook Key</label>
+    <input type="text" name="bitbucket_webhook_key" value="{{ config.remoteWebHookKey }}" placeholder="Webhook Key" id="bitbucket_webhook_key" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="bitbucket_webhook">
+      <input type="checkbox" name="bitbucket_webhook" {% if config.remoteWebHook %}checked="checked"{% endif %} value="1" id="bitbucket_webhook"> &nbsp; Enabled
+    </label>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript">
+    $(function() {
+      var $adapter = $(document.getElementById('adapter'));
+      var $pluginBox = $(document.getElementById('bitbucket_plugin')).closest('.plugin-box');
+      var $required = $('[required]', $pluginBox);
+
+      $adapter.change(function() {
+        if ($(this).val() === 'BitBucket') {
+          $pluginBox.fadeIn();
+          $required.prop('required', true);
+        } else {
+          $pluginBox.hide();
+          $required.prop('required', false);
+        }
+      }).change();
+    });
+  </script>
+{% endblock %}

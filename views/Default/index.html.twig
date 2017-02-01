@@ -3,6 +3,6 @@
 {% block body %}
     <h2>This is a private repository.</h2>
     <p>If you should have access, contact us.
-      <span class="contact"><span></span></span>
+      <a href="mailto:{{ config.repository_contact }}">{{ config.repository_contact }}</a>
     </p>
 {% endblock %}
