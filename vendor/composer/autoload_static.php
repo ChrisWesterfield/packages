@@ -257,6 +257,13 @@ class ComposerStaticInit5c845a8939a363028f6b7d41d12a8364
                 0 => __DIR__ . '/..' . '/michelf/php-markdown',
             ),
         ),
+        'H' => 
+        array (
+            'Httpful' => 
+            array (
+                0 => __DIR__ . '/..' . '/nategood/httpful/src',
+            ),
+        ),
         'G' => 
         array (
             'Guzzle\\Tests' => 

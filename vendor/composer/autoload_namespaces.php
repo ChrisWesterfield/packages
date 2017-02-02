@@ -12,6 +12,7 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
     'Michelf' => array($vendorDir . '/michelf/php-markdown'),
+    'Httpful' => array($vendorDir . '/nategood/httpful/src'),
     'Guzzle\\Tests' => array($vendorDir . '/guzzle/guzzle/tests'),
     'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),
     'Gitlab\\' => array($vendorDir . '/m4tthumphrey/php-gitlab-api/lib'),
