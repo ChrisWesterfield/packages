@@ -2,7 +2,6 @@
 /.project
 /.buildpath
 /satis.phar
-/vendor
 /satis.json
 /web/packages.json
 /web/include
@@ -11,4 +10,4 @@
 /cache/*
 /logs/*
 /config/deploy.rb
-/vendor/
+site.yml
